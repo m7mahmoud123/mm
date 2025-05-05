@@ -98,10 +98,20 @@ app.post('/register', async (req, res) => {
 app.post('/login', async (req, res) => {
   try {
       const { name, email, password } = req.body;
-      const newUser = new User({ name, email, password });
+      const checkEmail = await User.findOne({email:email})
+      if(checkEmail){
+        return res.json('user is already here')
+      }
+      else{
+        const newUser = new User({ name, email, password });
       await newUser.save();
       const token = jwt.sign({ email }, 'fffff');
-      res.json(token);
+      res.json({
+        "token":token,
+        "user":newUser
+
+      });
+      }
   } catch (err) {
       res.status(500).json({ error: err.message });
   }
