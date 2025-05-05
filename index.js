@@ -49,7 +49,7 @@ app.post('/users', async (req, res) => {
 });
 
 
-app.post('/register', async (req, res) => {
+app.post('/login',saveroutes, async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
@@ -62,16 +62,23 @@ app.post('/register', async (req, res) => {
     }
 
     // Check if email is already registered
-    const existingUser = await User.findOne({ email });
-    if (existingUser) {
-      return res.status(400).json({ message: 'User is already registered' });
-    }
+    const existingUser = await User.findOne({ email :email});
+    
 
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Create and save the new user
-    const newUser = new User({
+    const checkPassword = await bcrypt.compare(password , hashedPassword)
+
+
+    if (!existingUser || !checkPassword) {
+      return res.status(400).json({ message: 'you should register first' });
+    }
+    
+
+   else{
+     // Create and save the new user
+     const newUser = new User({
       name,
       email,
       password: hashedPassword
@@ -88,6 +95,7 @@ app.post('/register', async (req, res) => {
         email: newUser.email
       }
     });
+   }
   } catch (error) {
     console.error('Registration error:', error);
     res.status(500).json({ message: 'Server error', error: error.message });
@@ -95,7 +103,7 @@ app.post('/register', async (req, res) => {
 });
 
 
-app.post('/login', async (req, res) => {
+app.post('/register', async (req, res) => {
   try {
       const { name, email, password } = req.body;
       const checkEmail = await User.findOne({email:email})
