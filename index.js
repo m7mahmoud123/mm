@@ -108,13 +108,16 @@ app.post('/register', async (req, res) => {
       const { name, email, password } = req.body;
       const checkEmail = await User.findOne({email:email})
       if(checkEmail){
-        return res.json('user is already here')
+        return res.json({
+          "message" :'هذا المستخدم مسجل بالفعل'
+        })
       }
       else{
         const newUser = new User({ name, email, password });
       await newUser.save();
       const token = jwt.sign({ email }, 'fffff');
       res.json({
+        "message" : "تم التسجيل بنجاح",
         "token":token,
         "user":newUser
 

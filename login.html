@@ -15,13 +15,14 @@
         const email = document.getElementById('email')
         const password = document.getElementById('password')
         const btn = document.getElementById('btn')
+        const token = localStorage.getItem('token')
 
         btn.onclick = function(){
             fetch('https://mm-5ijy.onrender.com/login', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer your_token_here' // If authentication is needed
+    'Authorization': `Bearer ${token}` // If authentication is needed
   },
   body: JSON.stringify({
     name : name.value ,
