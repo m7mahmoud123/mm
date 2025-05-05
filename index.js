@@ -77,6 +77,8 @@ app.post('/login',saveroutes, async (req, res) => {
     
 
    else{
+
+    const token = jwt.sign({email} , "fffff")
      // Create and save the new user
      const newUser = new User({
       name,
@@ -93,7 +95,8 @@ app.post('/login',saveroutes, async (req, res) => {
         id: newUser._id,
         name: newUser.name,
         email: newUser.email
-      }
+      }, 
+      "token":token
     });
    }
   } catch (error) {
