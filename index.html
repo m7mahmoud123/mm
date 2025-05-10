@@ -26,6 +26,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
 <!--
 
 TemplateMo 588 ebook landing
@@ -39,22 +40,101 @@ https://templatemo.com/tm-588-ebook-landing
 
         <main>
 
+            <div class="register">
+                <div class="register-container">
+
+                    <h1 id="close">close</h1>
+
+                    <div class="header">
+                        <div class="logo">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h1 id="header-title">أنشئ حسابك</h1>
+                        <div class="subtitle" id="header-subtitle">الرجاء إدخال بياناتك للدخول إلى النظام</div>
+                    </div>
+
+
+                    <input type='string' id="register-name">
+                   <input type='string' id="register-email">
+                   <input type='string' id="register-password">
+                   <button id="register-btn">أنشئ حسابك</button>
+                   <h1 id="message"></h1>
+                   
+                </div>
+            </div>
+
+            <div class="login" id="login">
+
+
+                <div class="login-container">
+
+                    <h1 id="close2">close</h1>
+                    <div class="header">
+                        <div class="logo">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h1 id="header-title">تسجيل الدخول</h1>
+                        <div class="subtitle" id="header-subtitle">الرجاء إدخال بياناتك للدخول إلى النظام</div>
+                    </div>
+                    
+                    <div class="content">
+                        <!-- Login Form (shown by default) -->
+                        <div class="login-form" id="login-form">
+                            <div class="input-group">
+                                <label for="name">الاسم الكامل</label>
+                                <i class="fas fa-user input-icon"></i>
+                                <input type='text' id="name" placeholder="أدخل اسمك الكامل">
+                                <div class="error-message" id="name-error">الرجاء إدخال اسم صحيح</div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="email">البريد الإلكتروني</label>
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input type='email' id="email" placeholder="أدخل بريدك الإلكتروني">
+                                <div class="error-message" id="email-error">الرجاء إدخال بريد إلكتروني صحيح</div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="password">كلمة المرور</label>
+                                <i class="fas fa-lock input-icon"></i>
+                                <input type='password' id="password" placeholder="أدخل كلمة المرور">
+                                <div class="error-message" id="password-error">كلمة المرور يجب أن تكون على الأقل 6 أحرف</div>
+                            </div>
+                            
+                            <button id="login-btn">
+                                <i class="fas fa-sign-in-alt"></i>
+                                تسجيل الدخول
+                            </button>
+                            
+                            <h1 id="success"></h1>
+                            
+                            
+                            
+                            
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            
+            </div>
+
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
-                        <i class="navbar-brand-icon bi-book me-2"></i>
+                <i class="navbar-brand-icon bi-book me-2"></i>
                         <span>Mr Sameh</span>
                     </a>
 
                     <div class="d-lg-none ms-auto me-3">
                         <a href="#" class="btn custom-btn custom-border-btn btn-naira btn-inverted">
                             <i class="btn-icon bi-cloud-download"></i>
-                            <span>أنشئ حساب</span><!-- duplicated another one below for mobile -->
+                           
                         </a>
                     </div>
     
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon "></span>
                     </button>
     
                     <div class="collapse navbar-collapse" id="navbarNav">
@@ -81,8 +161,7 @@ https://templatemo.com/tm-588-ebook-landing
                         </ul>
 
                         <div class="d-none d-lg-block">
-                            <a href="./register.html" class="btn custom-btn custom-border-btn btn-naira btn-inverted">
-                                <i class="btn-icon bi-cloud-download"></i>
+                            <a  class="btn custom-btn custom-border-btn btn-naira btn-inverted" id="register">
                                 <span>انشئ حساب</span><!-- duplicated above one for mobile -->
                             </a>
                         </div>
@@ -101,9 +180,9 @@ https://templatemo.com/tm-588-ebook-landing
 
                             <h1 class="text-white mb-4">سامح محمود معلم الأحياء للثانوية العامة والأزهرية</h1>
 
-                            <a href="./register.html" class="btn custom-btn smoothscroll me-3">انشاء حساب</a>
+                            <a  class="btn custom-btn smoothscroll me-3" id="register2">انشاء حساب</a>
 
-                            <a href="./login.html">تسجيل الدخول</a>
+                            <a class="link link--kale smoothscroll" id="login-button">تسجيل الدخول</a>
                         </div>
 
                         <div class="hero-image-wrap col-lg-6 col-12 mt-3 mt-lg-0">
@@ -222,9 +301,7 @@ https://templatemo.com/tm-588-ebook-landing
                       </div>
                 
                       <div class="course-footer">
-                        <div class="course-price">
-                          <span>59.99$</span> 29.99$
-                        </div>
+                        
                         <button class="enroll-btn">سجل الآن</button>
                       </div>
                     </div>
@@ -269,9 +346,7 @@ https://templatemo.com/tm-588-ebook-landing
                       </div>
                 
                       <div class="course-footer">
-                        <div class="course-price">
-                          <span>59.99$</span> 29.99$
-                        </div>
+                        
                         <button class="enroll-btn">سجل الآن</button>
                       </div>
                     </div>
@@ -316,9 +391,7 @@ https://templatemo.com/tm-588-ebook-landing
                       </div>
                 
                       <div class="course-footer">
-                        <div class="course-price">
-                          <span>59.99$</span> 29.99$
-                        </div>
+                        
                         <button class="enroll-btn">سجل الآن</button>
                       </div>
                     </div>
@@ -433,91 +506,114 @@ https://templatemo.com/tm-588-ebook-landing
                 </div>
             </section>
 
-
-            <section class="contact-section section-padding" id="section_5">
+            <section class="footer-section section-padding" id="section_5">
                 <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-5 col-12 mx-auto">
-                            <form class="custom-form ebook-download-form bg-white shadow" action="#" method="post" role="form">
-                                <div class="text-center mb-5">
-                                    <h2 class="mb-1">Get your free ebook</h2>
-                                </div>
-
-                                <div class="ebook-download-form-body">
-                                    <div class="input-group mb-4">
-                                        <input type="text" name="ebook-form-name" id="ebook-form-name" class="form-control" aria-label="ebook-form-name" aria-describedby="basic-addon1" placeholder="Your Name" required>
-
-                                        <span class="input-group-text" id="basic-addon1">
-                                            <i class="custom-form-icon bi-person"></i>
-                                        </span>
-                                    </div>
-
-                                    <div class="input-group mb-4">
-                                        <input type="email" name="ebook-email" id="ebook-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="your@company.com" aria-label="ebook-form-email" aria-describedby="basic-addon2" required="">
-
-                                        <span class="input-group-text" id="basic-addon2">
-                                            <i class="custom-form-icon bi-envelope"></i>
-                                        </span>
-                                    </div>
-
-                                    <div class="col-lg-8 col-md-10 col-8 mx-auto">
-                                        <button type="submit" class="form-control">Download ebook</button>
-                                    </div>
+                    <!-- Top Section with 4 Columns -->
+                    <div class="row g-5 mb-5">
+                        <!-- Brand Column -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-brand">
+                                <svg width="40" height="40" viewBox="0 0 40 40" class="brand-logo">
+                                    <path fill="var(--primary-color)" d="M20 0L0 20l20 20 20-20z"/>
+                                    <path fill="var(--secondary-color)" d="M10 10L30 10 30 30 10 30z"/>
+                                </svg>
+                                <h3 class="mt-3 mb-4" style="color: var(--white-color);">Ebook<span style="color: var(--secondary-color);">Hub</span></h3>
+                                <p style="color: rgba(255,255,255,0.7);">Transforming reading experiences through digital innovation.</p>
+                            </div>
+                        </div>
+            
+                        <!-- Quick Links -->
+                        <div class="col-lg-2 col-md-6">
+                            <h4 class="footer-heading mb-4">Explore</h4>
+                            <ul class="footer-links">
+                                <li><a href="#">Featured</a></li>
+                                <li><a href="#">Genres</a></li>
+                                <li><a href="#">New Releases</a></li>
+                                <li><a href="#">Bestsellers</a></li>
+                                <li><a href="#">Authors</a></li>
+                            </ul>
+                        </div>
+            
+                        <!-- Support -->
+                        <div class="col-lg-2 col-md-6">
+                            <h4 class="footer-heading mb-4">Support</h4>
+                            <ul class="footer-links">
+                                <li><a href="#">Help Center</a></li>
+                                <li><a href="#">Account</a></li>
+                                <li><a href="#">Subscription</a></li>
+                                <li><a href="#">Device Guide</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+            
+                        <!-- Newsletter -->
+                        <div class="col-lg-5 col-md-6">
+                            <h4 class="footer-heading mb-4">Stay Updated</h4>
+                            <p style="color: rgba(255,255,255,0.7);">Subscribe for exclusive content and offers</p>
+                            <form class="newsletter-form mt-4">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Your email address">
+                                    <button class="btn btn-subscribe" type="submit">
+                                        <span>Subscribe</span>
+                                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+                                            <path d="M1 7H17M11 1L17 7L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
                                 </div>
                             </form>
+                            <div class="trust-badges mt-4">
+                                <span class="badge">SSL Secure</span>
+                                <span class="badge">Award Winner</span>
+                                <span class="badge">24/7 Support</span>
+                            </div>
                         </div>
-
-                        <div class="col-lg-6 col-12">
-                            <h6 class="mt-5">Say hi and talk to us</h6>
-
-                            <h2 class="mb-4">Contact</h2>
-
-                            <p class="mb-3">
-                                <i class="bi-geo-alt me-2"></i>
-                                London, United Kingdom
-                            </p>
-
-                            <p class="mb-2">
-                                <a href="tel: 010-020-0340" class="contact-link">
-                                    010-020-0340
-                                </a>
-                            </p>
-
-                            <p>
-                                <a href="mailto:info@company.com" class="contact-link">
-                                    info@company.com
-                                </a>
-                            </p>
-
-                            <h6 class="site-footer-title mt-5 mb-3">Social</h6>
-
-                            <ul class="social-icon mb-4">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-instagram"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-twitter"></a>
-                                </li>
-                                
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-facebook"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-whatsapp"></a>
-                                </li>
-                            </ul>
-
-                            <p class="copyright-text">Copyright © 2048 ebook company
-                            <br><br><a rel="nofollow" href="https://templatemo.com" target="_blank">designed by templatemo</a></p>
+                    </div>
+            
+                    <!-- Divider -->
+                    <div class="footer-divider"></div>
+            
+                    <!-- Bottom Section -->
+                    <div class="row align-items-center mt-5">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <p class="copyright-text">© 2024 EbookHub. All rights reserved.</p>
                         </div>
-
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-md-end">
+                                <div class="social-links">
+                                    <a href="#" aria-label="Twitter">
+                                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" aria-label="Instagram">
+                                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" aria-label="Facebook">
+                                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" aria-label="LinkedIn">
+                                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="app-download ms-4">
+                                    <a href="#" class="app-btn">
+                                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                            <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z"/>
+                                        </svg>
+                                        <span>Get the App</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-
 
 
            
@@ -532,6 +628,7 @@ https://templatemo.com/tm-588-ebook-landing
         <script src="js/click-scroll.js"></script>
         <script src="js/custom.js"></script>
         <script src="./js/form.js"></script>
+        <script src="./login.js"></script>
 
     </body>
 </html>
